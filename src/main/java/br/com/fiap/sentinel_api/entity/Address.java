@@ -44,10 +44,6 @@ public class Address {
     @NotNull(message = "state cannot be null")
     private String state;
 
-    @Size(min = 3, message = "must have at least 3 characters")
-    @NotBlank(message = "cannot be blank")
-    @NotNull(message = "cannot be null")
-
     @Pattern(regexp = "\\d{5}-?\\d{3}",
             message = "Use XXXXX-XXX")
     @NotNull(message = "cep cannot be null")

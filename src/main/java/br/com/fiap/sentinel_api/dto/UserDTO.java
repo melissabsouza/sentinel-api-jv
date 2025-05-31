@@ -1,5 +1,6 @@
 package br.com.fiap.sentinel_api.dto;
 
+import br.com.fiap.sentinel_api.enums.UserRole;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -12,17 +13,14 @@ public class UserDTO {
     @Size(min = 3, message = "e-mail must have at least 3 characters")
     @NotBlank(message = "e-mail cannot be blank")
     @NotNull(message = "e-mail cannot be null")
-    @Column(name = "email_user", nullable = false)
     private String email;
 
     @Size(min = 8, message = "password must have at least 8 characters")
     @NotBlank(message = "password cannot be blank")
     @NotNull(message = "password cannot be null")
-    @Column(name = "password_user", nullable = false)
     private String password;
 
     @NotBlank(message = "role cannot be blank")
     @NotNull(message = "role cannot be null")
-    @Column(name = "role_user", nullable = false)
-    private String role;
+    private UserRole role;
 }
