@@ -21,7 +21,7 @@ public class AddressDTO {
 
     @Size(min = 3, message = "district must have at least 3 characters")
     @NotBlank(message = "district cannot be blank")
-    @NotNull(message = "disctrict cannot be null")
+    @NotNull(message = "district cannot be null")
     private String district;
 
     @Size(min = 3, message = "must have at least 3 characters")

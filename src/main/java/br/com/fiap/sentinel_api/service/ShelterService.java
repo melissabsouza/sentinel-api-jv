@@ -14,6 +14,7 @@ import br.com.fiap.sentinel_api.service.mapper.ShelterMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +41,7 @@ public class ShelterService {
         shelter.setAvailableResources(shelterDTO.getAvailableResources());
         shelter.setCurrentCapacity(shelterDTO.getCurrentCapacity());
         shelter.setTotalCapacity(shelterDTO.getTotalCapacity());
-        shelter.setLastUpdate(shelterDTO.getLastUpdate());
+        shelter.setLastUpdate(LocalDateTime.now());
 
         if(shelterDTO.getUserEmail() != null){
             User user = userRepository.findByEmail(shelterDTO.getUserEmail())

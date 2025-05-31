@@ -31,7 +31,7 @@ public class Shelter {
     private int totalCapacity;
 
     @NotNull(message = "current capacity cannot be null")
-    @Column(name = "current capacity", nullable = false)
+    @Column(name = "current_capacity", nullable = false)
     private int currentCapacity;
 
     @Size(min = 3, message = "available resources must have at least 3 characters")

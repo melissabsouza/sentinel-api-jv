@@ -35,7 +35,6 @@ public class ShelterMapper {
 
         shelter.setAddress(AddressMapper.toEntity(shelterDTO.getAddress()));
         shelter.setContact(ContactMapper.toEntity(shelterDTO.getContact()));
-//        shelter.setUser(UserMapper.toEntity(shelterDTO.getUserEmail()));
         return shelter;
 
     }

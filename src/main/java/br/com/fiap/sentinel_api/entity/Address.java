@@ -37,11 +37,13 @@ public class Address {
     @Size(min = 3, message = "must have at least 3 characters")
     @NotBlank(message = "cannot be blank")
     @NotNull(message = "cannot be null")
+    @Column(name = "city_address", length = 30, nullable = false)
     private String city;
 
     @Size(min = 3, message = "state must have at least 3 characters")
     @NotBlank(message = "state cannot be blank")
     @NotNull(message = "state cannot be null")
+    @Column(name = "state_address", length = 30, nullable = false)
     private String state;
 
     @Pattern(regexp = "\\d{5}-?\\d{3}",
