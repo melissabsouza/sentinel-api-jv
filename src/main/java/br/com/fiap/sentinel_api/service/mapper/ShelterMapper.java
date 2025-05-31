@@ -16,7 +16,10 @@ public class ShelterMapper {
 
         shelterDTO.setAddress(AddressMapper.toDto(shelter.getAddress()));
         shelterDTO.setContact(ContactMapper.toDto(shelter.getContact()));
-        shelterDTO.setUser(UserMapper.toDto(shelter.getUser()));
+
+        if(shelter.getUser() != null){
+            shelterDTO.setUserEmail(shelter.getUser().getEmail());
+        }
         return shelterDTO;
     }
 
@@ -32,7 +35,7 @@ public class ShelterMapper {
 
         shelter.setAddress(AddressMapper.toEntity(shelterDTO.getAddress()));
         shelter.setContact(ContactMapper.toEntity(shelterDTO.getContact()));
-        shelter.setUser(UserMapper.toEntity(shelterDTO.getUser()));
+//        shelter.setUser(UserMapper.toEntity(shelterDTO.getUserEmail()));
         return shelter;
 
     }

@@ -42,5 +42,5 @@ public class ShelterDTO {
     @Valid
     private ContactDTO contact;
     @Valid
-    private UserDTO user;
+    private String userEmail;
 }
