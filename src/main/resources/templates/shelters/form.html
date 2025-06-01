@@ -16,8 +16,8 @@
 
 <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-300 w-full max-w-4xl items-center justify-center">
     <div class="flex flex-col items-center mb-6">
-        <h2 th:text="#{clinicas.title}" class="text-2xl font-extrabold mb-2 text-blue-700">Cadastro de Abrigos</h2>
-        <a th:text="#{clinicas.list}" class="text-sm hover:underline text-blue-700 flex items-center gap-1"
+        <h2 th:text="#{shelter.title}" class="text-2xl font-extrabold mb-2 text-blue-700">Cadastro de Abrigos</h2>
+        <a th:text="#{shelter.list}" class="text-sm hover:underline text-blue-700 flex items-center gap-1"
            th:href="@{/shelters}">
             <svg class="w-4 h-4" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M3 12h18M3 6h18M3 18h18"/>
@@ -44,21 +44,21 @@
         <input type="hidden" th:field="*{id}">
 
         <div class="flex flex-col">
-            <label for="name" class="block font-medium">Nome</label>
+            <label th:text="#{name.shelter}" for="name" class="block font-medium">Nome</label>
             <input type="text" id="name" th:field="*{name}" class="mt-1 w-full p-2 border rounded-lg border-gray-300"
                    required/>
             <li th:each="err : ${#fields.errors('name')}" th:text="${err}" class="text-red-500 text-sm mt-1"></li>
         </div>
 
         <div class="flex flex-col">
-            <label th:text="#{name.form}" for="totalCapacity" class="block font-medium">Capacidade Total</label>
+            <label th:text="#{capacity}" for="totalCapacity" class="block font-medium">Capacidade Total</label>
             <input type="number" id="totalCapacity" th:field="*{totalCapacity}" class="mt-1 w-full p-2 border rounded-lg border-gray-300"
                    required/>
             <li th:each="err : ${#fields.errors('totalCapacity')}" th:text="${err}" class="text-red-500 text-sm mt-1"></li>
         </div>
 
         <div class="flex flex-col">
-            <label th:text="#{telefone.text}" for="currentCapacity" class="block font-medium">Capacidade Atual</label>
+            <label th:text="#{current.capacity}" for="currentCapacity" class="block font-medium">Capacidade Atual</label>
             <input type="number" id="currentCapacity" th:field="*{currentCapacity}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('currentCapacity')}" th:text="${err}"
@@ -67,7 +67,7 @@
 
 
         <div class="flex flex-col">
-            <label for="availableResources" class="block font-medium">Recursos Disponíveis</label>
+            <label th:text="#{resources}" for="availableResources" class="block font-medium">Recursos Disponíveis</label>
             <input type="text" id="availableResources" th:field="*{availableResources}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
@@ -89,7 +89,7 @@
         </div>
 
         <div class="flex flex-col">
-            <label for="userEmail" class="block font-medium">Email do voluntário responsável</label>
+            <label th:text="#{user.email}" for="userEmail" class="block font-medium">Email do voluntário responsável</label>
             <input type="email" id="userEmail" th:field="*{userEmail}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('userEmail')}" th:text="${err}"
@@ -97,9 +97,9 @@
         </div>
 
         <div class="flex flex-col col-span-2">
-        <h3 th:text="#{enderecos.text}" class="text-xl font-semibold mb-2">Contato</h3>
+        <h3 th:text="#{contact}" class="text-xl font-semibold mb-2">Contato</h3>
         <div class="flex flex-col">
-            <label for="email" class="block font-medium">Email do Abrigo</label>
+            <label th:text="#{email}" for="email" class="block font-medium">Email do Abrigo</label>
             <input type="email" id="email" th:field="*{contact.email}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
@@ -107,7 +107,7 @@
         </div>
 
         <div class="flex flex-col">
-            <label for="phone" class="block font-medium">Telefone</label>
+            <label th:text="#{phone}" for="phone" class="block font-medium">Telefone</label>
             <input type="text" id="phone" th:field="*{contact.phone}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
@@ -118,7 +118,7 @@
 <!--        endereco-->
 
         <div class="flex flex-col col-span-2">
-            <h3 th:text="#{enderecos.text}" class="text-xl font-semibold mb-2">Endereço</h3>
+            <h3 th:text="#{address.text}" class="text-xl font-semibold mb-2">Endereço</h3>
             <label th:text="#{address.street}" for="street" class="block font-medium">Rua</label>
             <input type="text" id="street" th:field="*{address.street}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
@@ -131,7 +131,7 @@
             <li th:each="err : ${#fields.errors('address.number')}" th:text="${err}"
                 class="text-red-500 text-sm mt-1"></li>
 
-            <label th:text="#{enderecos.bairro}" for="district" class="block font-medium mt-2">Bairro</label>
+            <label th:text="#{address.district}" for="district" class="block font-medium mt-2">Bairro</label>
             <input type="text" id="district" th:field="*{address.district}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('address.district')}" th:text="${err}"
@@ -143,7 +143,7 @@
             <li th:each="err : ${#fields.errors('address.cep')}" th:text="${err}"
                 class="text-red-500 text-sm mt-1"></li>
 
-            <label th:text="#{enderecos.cidade}" for="city" class="block font-medium mt-2">Cidade</label>
+            <label th:text="#{address.city}" for="city" class="block font-medium mt-2">Cidade</label>
             <input type="text" id="city" th:field="*{address.city}"
                    class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
             <li th:each="err : ${#fields.errors('address.city')}" th:text="${err}"

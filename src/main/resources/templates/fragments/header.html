@@ -26,7 +26,7 @@
     </div>
 
     <nav class="hidden md:flex space-x-6">
-      <a th:href="@{/shelters}" th:text="#{dentistas.header}"
+      <a th:href="@{/shelters}" th:text="#{shelter.header}"
          class="text-gray-600 hover:text-blue-600">Abrigos</a>
       <a th:href="@{/sinistros}" class="text-gray-600 hover:text-blue-600">Spring AI</a>
     </nav>
@@ -42,8 +42,8 @@
   </div>
   <nav id="mobileMenu" class="md:hidden bg-white shadow-md">
     <a th:href="@{/}" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
-    <a th:href="@{/shelters}" th:text="#{atendimentos.header}" class="text-gray-600 hover:text-blue-600">Shelters</a>
-    <a th:href="@{/sinistros}" th:text="#{atendimentos.header}" class="text-gray-600 hover:text-blue-600">Spring AI</a>
+    <a th:href="@{/shelters}" th:text="#{shelter.header}" class="text-gray-600 hover:text-blue-600">Shelters</a>
+    <a th:href="@{/sinistros}" class="text-gray-600 hover:text-blue-600">Spring AI</a>
   </nav>
 </header>
 

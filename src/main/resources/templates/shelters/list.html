@@ -18,11 +18,11 @@
 </div>
 
 <div class="max-w-6xl mx-auto mt-10 bg-white p-6 rounded-xl shadow-md border border-gray-200">
-    <h1 th:text="#{dentistas.title}" class="text-2xl font-extrabold text-center mb-6" style="color: var(--cor-azul);">
+    <h1 th:text="#{shelter.list}" class="text-2xl font-extrabold text-center mb-6" style="color: var(--cor-azul);">
         Lista de Abrigos</h1>
 
     <div class="text-center mb-4">
-        <a th:text="#{dentista.new}" th:href="@{/shelters/new}"
+        <a th:text="#{shelter.new}" th:href="@{/shelters/new}"
            class="inline-block bg-[color:var(--cor-azul)] text-white px-4 py-2 rounded-lg shadow hover:brightness-110 transition-all">
             Novo Abrigo
         </a>
@@ -33,15 +33,15 @@
             <thead>
             <tr class="bg-[color:var(--cor-vermelho)] text-white text-sm uppercase">
                 <th class="p-3 text-left">ID</th>
-                <th class="p-3 text-left">Nome</th>
-                <th th:text="#{name.form}" class="p-3 text-left">Capacidade Total</th>
-                <th class="p-3 text-left">Capacidade Atual</th>
-                <th th:text="#{dentista.datacont}" class="p-3 text-left">Recursos Disponíveis</th>
-                <th th:text="#{dentista.espec}" class="p-3 text-left">Status</th>
-                <th th:text="#{clinicas.header}" class="p-3 text-left">Última Atualização</th>
-                <th th:text="#{clinicas.header}" class="p-3 text-left">Voluntário Responsável</th>
-                <th th:text="#{enderecos.text}" class="p-3 text-left">Endereço</th>
-                <th th:text="#{telefone.text}" class="p-3 text-left">Contato</th>
+                <th th:text="#{name.shelter}" class="p-3 text-left">Nome</th>
+                <th th:text="#{capacity}" class="p-3 text-left">Capacidade Total</th>
+                <th th:text="#{current.capacity}" class="p-3 text-left">Capacidade Atual</th>
+                <th th:text="#{resources}" class="p-3 text-left">Recursos Disponíveis</th>
+                <th class="p-3 text-left">Status</th>
+                <th th:text="#{last.update}" class="p-3 text-left">Última Atualização</th>
+                <th th:text="#{volunteer}" class="p-3 text-left">Voluntário Responsável</th>
+                <th th:text="#{address.text}" class="p-3 text-left">Endereço</th>
+                <th th:text="#{contact}" class="p-3 text-left">Contato</th>
                 <th th:text="#{actions.table}" class="p-3 text-center">Ações</th>
             </tr>
             </thead>

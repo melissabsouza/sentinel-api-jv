@@ -24,6 +24,10 @@ spring:
     password: globalDB@5525
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
+  messages:
+    encoding: UTF-8
+    basename: messages
+
   devtools:
     restart:
       enabled: true
