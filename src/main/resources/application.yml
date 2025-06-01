@@ -10,7 +10,7 @@ spring:
     name: sentinel-api
   jpa:
     open-in-view: true
-    database-platform: org.hibernate.dialect.OracleDialect
+    database-platform: org.hibernate.dialect.SQLServerDialect
     hibernate:
       ddl-auto: none
     properties:
@@ -18,10 +18,11 @@ spring:
         format_sql: true
 
   datasource:
-    url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
-    username: rm552535
-    password: 030804
-    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:sqlserver://sqlserver-rm552535.database.windows.net:1433;database=sentinelglobal;user=admsql@sqlserver-rm552535;password=globalDB@5525;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+
+    username: admsql
+    password: globalDB@5525
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
   devtools:
     restart:
