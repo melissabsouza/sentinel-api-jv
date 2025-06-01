@@ -56,6 +56,13 @@ public class ShelterController {
         return "redirect:/shelters";
     }
 
+    @GetMapping("/edit/{id}")
+    public String editShelter(@PathVariable Long id, Model model) {
+        ShelterDTO shelterDTO = shelterService.findById(id);
+        model.addAttribute("shelter", shelterDTO);
+        return "shelters/form";
+    }
+
     @GetMapping("/delete/{id}")
     public String deleteShelter(@PathVariable Long id, Model model){
         shelterService.deleteById(id);

@@ -45,8 +45,6 @@ public class Shelter {
     @Column(name = "status_shelter", nullable = false)
     private ShelterStatus status;
 
-    @NotBlank(message = "date cannot be blank")
-    @NotNull(message = "date cannot be null")
     @Column(name = "update_date_shelter", nullable = false)
     private LocalDateTime lastUpdate;
 

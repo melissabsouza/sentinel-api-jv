@@ -33,8 +33,6 @@ public class ShelterDTO {
     @NotNull(message = "status cannot be null")
     private ShelterStatus status;
 
-    @NotBlank(message = "date cannot be blank")
-    @NotNull(message = "date cannot be null")
     private LocalDateTime lastUpdate;
 
     @Valid
