@@ -8,12 +8,14 @@ import br.com.fiap.sentinel_api.service.ShelterService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.extern.java.Log;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 @AllArgsConstructor
@@ -74,4 +76,15 @@ public class ShelterController {
         model.addAttribute("error", ex.getMessage());
         return "shelters/form";
     }
+
+    private MessageSource messageSource;
+
+    @GetMapping("/test-locale")
+    @ResponseBody
+    public String testLocale(@RequestParam(name = "lang", required = false) String lang) {
+        Locale locale = (lang != null) ? Locale.forLanguageTag(lang) : Locale.getDefault();
+        String mensagem = messageSource.getMessage("hello.message", null, locale);
+        return "Locale: " + locale + " -> Mensagem: " + mensagem;
+    }
+
 }
