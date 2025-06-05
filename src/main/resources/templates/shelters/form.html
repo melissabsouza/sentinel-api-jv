@@ -97,25 +97,25 @@
         </div>
 
         <div class="flex flex-col col-span-2">
-        <h3 th:text="#{contact}" class="text-xl font-semibold mb-2">Contato</h3>
-        <div class="flex flex-col">
-            <label th:text="#{email}" for="email" class="block font-medium">Email do Abrigo</label>
-            <input type="email" id="email" th:field="*{contact.email}"
-                   class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
-            <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
-                class="text-red-500 text-sm mt-1"></li>
+            <h3 th:text="#{contact}" class="text-xl font-semibold mb-2">Contato</h3>
+            <div class="flex flex-col">
+                <label th:text="#{email}" for="email" class="block font-medium">Email do Abrigo</label>
+                <input type="email" id="email" th:field="*{contact.email}"
+                       class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
+                <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
+                    class="text-red-500 text-sm mt-1"></li>
+            </div>
+
+            <div class="flex flex-col">
+                <label th:text="#{phone}" for="phone" class="block font-medium">Telefone</label>
+                <input type="text" id="phone" th:field="*{contact.phone}"
+                       class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
+                <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
+                    class="text-red-500 text-sm mt-1"></li>
+            </div>
         </div>
 
-        <div class="flex flex-col">
-            <label th:text="#{phone}" for="phone" class="block font-medium">Telefone</label>
-            <input type="text" id="phone" th:field="*{contact.phone}"
-                   class="mt-1 w-full p-2 border rounded-lg border-gray-300" required/>
-            <li th:each="err : ${#fields.errors('availableResources')}" th:text="${err}"
-                class="text-red-500 text-sm mt-1"></li>
-        </div>
-        </div>
-
-<!--        endereco-->
+        <!--        endereco-->
 
         <div class="flex flex-col col-span-2">
             <h3 th:text="#{address.text}" class="text-xl font-semibold mb-2">Endereço</h3>
@@ -167,5 +167,8 @@
     </form>
 </div>
 
+<script>
+    lucide.createIcons();
+</script>
 </body>
 </html>

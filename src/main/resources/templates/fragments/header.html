@@ -8,11 +8,11 @@
 <!-- Header -->
 <header class="bg-white shadow-md mb-20">
   <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <div class="text-2xl font-bold text-gray-800">
-      <a th:href="@{/logout}" class="text-gray-600 hover:text-blue-600">
+    <form th:action="@{/logout}" method="post" class="inline">
+      <button type="submit" class="text-gray-600 hover:text-blue-600 bg-transparent border-none cursor-pointer">
         <i data-lucide="log-out"></i>
-      </a>
-    </div>
+      </button>
+    </form>
 
     <div class="flex gap-4 justify-end mb-4">
       <a href="?lang=pt" class="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-300 text-sm hover:bg-gray-100">
@@ -26,6 +26,7 @@
     </div>
 
     <nav class="hidden md:flex space-x-6">
+      <a th:href="@{/}" class="text-gray-600 hover:text-blue-600">Home</a>
       <a th:href="@{/shelters}" th:text="#{shelter.header}"
          class="text-gray-600 hover:text-blue-600">Abrigos</a>
       <a th:href="@{/ia}" class="text-gray-600 hover:text-blue-600">Spring AI</a>
