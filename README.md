@@ -11,7 +11,7 @@
 
 ---
 
- ### 📹 Video: 
+ ### 📹 Video: https://www.youtube.com/watch?v=1nBd30HnzO4
  ### 🌐 WebApp: https://gs-sentinel-api.azurewebsites.net/
  ### 📁 Organization: https://dev.azure.com/RM552535/2TDSPA%20-%20ENTREGAS%20-%20AMN
  ### 📲 Diagrama de Arquitetura: 
