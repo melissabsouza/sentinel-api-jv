@@ -14,8 +14,20 @@
  ### 📹 Video: 
  ### 🌐 WebApp: https://gs-sentinel-api.azurewebsites.net/
  ### 📁 Organization: https://dev.azure.com/RM552535/2TDSPA%20-%20ENTREGAS%20-%20AMN
+ ### 📲 Diagrama de Arquitetura: 
+![arquitetura](diagram/gs-sentinel.jpg)
+ ### 📲 Deploy: 
+ #### Azure pipelines
+Build:
+![build](diagram/build.png)
 
- ### 📲 Deploy:
+Template do Maven:
+![maven](diagram/mvn.png)
+
+Release:
+![release](diagram/release.png)
+![img.png](diagram/img.png)
+
 
 ---
 # 🏠 Sentinel
